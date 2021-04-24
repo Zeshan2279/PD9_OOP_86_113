@@ -22,7 +22,7 @@ public class Task3 {
         int count=1;
         for (int i=0;i<s.length();i++)
         {   
-            if(count==1||B!=' ')
+            if(count==0||B!=' ')
             {
             B=s.charAt(i);
             Blank=Blank+B;
