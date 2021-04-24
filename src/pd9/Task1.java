@@ -89,33 +89,3 @@ public class Task1 {
     }
 
 }
-// Scanner cin = new Scanner(System.in);
-//        System.out.println("InputString: (To Remove Spaces)\n ");
-//        String S = cin.nextLine();
-//        System.out.println(ridMultipleBlank(S));
-//static String ridMultipleBlank(String s) {
-//        StringBuilder strBuild = new StringBuilder();
-//        int spaceCheck = 0;
-// 
-//        return strBuild.toString();
-//    }
-//private static String toString(char charAt) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//       for (int i = 0; i < s.length(); i++) {
-//            if (s.charAt(i) != ' ') {
-//                strBuild.append(s.charAt(i));
-//                spaceCheck = 0;
-//            } else {
-//                spaceCheck++;
-//            }
-//            if (spaceCheck == 1) {
-//                strBuild.append(' ');
-//            }
-//        }
-//
-//        return strBuild.toString();
-//    }
-//private static String toString(char charAt) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }

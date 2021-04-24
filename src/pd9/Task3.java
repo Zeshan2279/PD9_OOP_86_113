@@ -30,12 +30,30 @@ public class Task3 {
 
         return strBuild.toString();
     }
+    static String removeInteger(String s){
+        String remove=" ";
+        char c=' ';
+        for (int y=0;y<s.length();y++)
+        {
+            if((s.charAt(y)<='9' && s.charAt(y)>='0' ))
+            {
+            }
+            else{
+            remove+=s.charAt(y);  }
+         
+        }
+       
+        return remove;
+    }
 
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in);
-        System.out.println("InputString: (To Remove Spaces)\n ");
+        System.out.println("InputString: (To Remove Spaces) ");
         String S = cin.nextLine();
         System.out.println(ridMultipleBlank(S));
+        System.out.println("\n  InputString: (To Remove Integers)\n ");
+        String Int = cin.nextLine();
+        System.out.println(removeInteger(Int));
 
     }
 
