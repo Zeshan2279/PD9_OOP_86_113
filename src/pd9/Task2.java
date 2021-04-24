@@ -5,6 +5,8 @@
  */
 package pd9;
 
+import java.util.Scanner;
+
 /**
  *
  * @author YDRGZM
@@ -12,7 +14,11 @@ package pd9;
 public class Task2 {
 
     public static void main(String[] args) {
-
+        Scanner cin = new Scanner(System.in);
+        System.out.println("Please enter a sentence: ");
+        String s = cin.nextLine();
+        System.out.println("Your sentence printed vertically is:");
+        displayVertical(s);
     }
 
     static void displayVertical(String s) {
