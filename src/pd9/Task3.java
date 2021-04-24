@@ -17,35 +17,21 @@ public class Task3 {
      * @param args the command line arguments
      */
     static String ridMultipleBlank(String s) {
-        String Blank = " ";
-        char B = ' ';
-        int count=1;
-        for (int i=0;i<s.length();i++)
-        {   
-            if(count==1||B!=' ')
-            {
-            B=s.charAt(i);
-            Blank=Blank+B;
-            count=0;
+        StringBuilder strBuild = new StringBuilder();
+        int spaceCheck = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) != ' ') {
+                strBuild.append(s.charAt(i));
+                spaceCheck = 0;
+            } else {
+                spaceCheck++;
             }
-            if(B!=' ')
-            {
-                count=1;
+            if (spaceCheck == 1) {
+                strBuild.append(' ');
             }
-           else if(B==' ')
-            {
-                count=0;
-            }
-            
-        
-              
-        
         }
-            
-           
-        
-        
-        return Blank;
+
+        return strBuild.toString();
     }
     public static void main(String[] args) {
         Scanner cin= new Scanner(System.in);
