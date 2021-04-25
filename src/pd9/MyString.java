@@ -15,13 +15,30 @@ public class MyString {
 
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in);
-        System.out.println("Enter String (Check if it is alphabetic): ");
+//        System.out.println("Enter String (Check if it is alphabetic): ");
+//        String s = cin.nextLine();
+//        if (isAlpha(s)) {
+//            System.out.println("Given String is only alphabetic");
+//        } else {
+//            System.out.println("Given String is not only alphabetic");
+//        }
+//
+//        System.out.println("\nEnter String (to capitalize each word of sentence): ");
+//        s = cin.nextLine();
+//        System.out.println("Output: " + "\n" + capitalizeEachWord(s));
+//
+//        System.out.println("\nEnter String (Toggle Case): ");
+//        s = cin.nextLine();
+//        System.out.println("Output: " + "\n" + toggleCase(s));
+//        System.out.println("\nEnter String (Digit Counter): ");
+//        s = cin.nextLine();
+//        System.out.println("Output: " + "\n" + "Number of digits are " + DigitCounter(s));
+//        System.out.println("\nEnter String (Remove Speacial Characters): ");
+//        s = cin.nextLine();
+//        System.out.println("Output: " + SpecialCharacterRemoval(s));
+        System.out.println("\nEnter String (To print each word in next line): ");
         String s = cin.nextLine();
-        if (isAlpha(s)) {
-            System.out.println("Given String is only alphabetic");
-        } else {
-            System.out.println("Given String is not only alphabetic");
-        }
+        NextLineWord(s);
 
         System.out.println("\nEnter String (to capitalize each word of sentence): ");
         s = cin.nextLine();
@@ -42,6 +59,7 @@ public class MyString {
         System.out.println("\nEnter Character to count in given String: ");
         String c=cin.nextLine();
         System.out.println("Output: "+"\n"+characterCounter(s, c));
+
     }
 
     static boolean isAlpha(String s) {
@@ -122,4 +140,12 @@ public class MyString {
         }
         return charCount;
     }
+
+    static void NextLineWord(String s) {
+        String[] arr=s.split("\\s");
+        for(int i=0; i<arr.length;i++ ){
+            System.out.println(arr[i]);
+        }
+    }
+
 }
