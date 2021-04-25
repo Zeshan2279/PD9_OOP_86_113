@@ -26,18 +26,22 @@ public class MyString {
         System.out.println("\nEnter String (to capitalize each word of sentence): ");
         s = cin.nextLine();
         System.out.println("Output: " + "\n" + capitalizeEachWord(s));
-        
+
         System.out.println("\nEnter String (Toggle Case): ");
         s = cin.nextLine();
         System.out.println("Output: " + "\n" + toggleCase(s));
         System.out.println("\nEnter String (Digit Counter): ");
         s = cin.nextLine();
-        System.out.println("Output: " + "\n" +"Number of digits are "+ DigitCounter(s));
+        System.out.println("Output: " + "\n" + "Number of digits are " + DigitCounter(s));
         System.out.println("\nEnter String (Remove Speacial Characters): ");
         s = cin.nextLine();
-        System.out.println("Output: "+ SpecialCharacterRemoval(s));
-        
-        
+        System.out.println("Output: " + SpecialCharacterRemoval(s));
+
+        System.out.println("\nEnter String (Character Counter): ");
+        s=cin.nextLine();
+        System.out.println("\nEnter Character to count in given String: ");
+        String c=cin.nextLine();
+        System.out.println("Output: "+"\n"+characterCounter(s, c));
     }
 
     static boolean isAlpha(String s) {
@@ -70,6 +74,7 @@ public class MyString {
         str += s.charAt(s.length() - 1);
         return str;
     }
+
     static String toggleCase(String s) {
         String result = "";
         for (int i = 0; i < s.length(); i++) {
@@ -84,28 +89,37 @@ public class MyString {
         }
         return result;
     }
-        static int DigitCounter(String s) {
-       int count=0;
+
+    static int DigitCounter(String s) {
+        int count = 0;
         for (int y = 0; y < s.length(); y++) {
-            if ((s.charAt(y) <= '9' && s.charAt(y) >= '0'))
-            {
+            if ((s.charAt(y) <= '9' && s.charAt(y) >= '0')) {
                 count += 1;
             }
         }
 
         return count;
     }
-        static String SpecialCharacterRemoval(String s) {
+
+    static String SpecialCharacterRemoval(String s) {
         String remove = "";
         for (int y = 0; y < s.length(); y++) {
-            if ((s.charAt(y) == '!' || s.charAt(y) == '@' ||s.charAt(y) == '#' || s.charAt(y) == '$'||s.charAt(y) == '%' || s.charAt(y) == '^'||s.charAt(y) == '&' || s.charAt(y) == '*'||s.charAt(y) == '(' || s.charAt(y) == ')'||s.charAt(y) == '_' || s.charAt(y) == '='||s.charAt(y) == '+' || s.charAt(y) == '-'||s.charAt(y) == '|' || s.charAt(y) == ':'||s.charAt(y) == '/' || s.charAt(y) == '~')) 
-            {}
-            else 
-            {
+            if ((s.charAt(y) == '!' || s.charAt(y) == '@' || s.charAt(y) == '#' || s.charAt(y) == '$' || s.charAt(y) == '%' || s.charAt(y) == '^' || s.charAt(y) == '&' || s.charAt(y) == '*' || s.charAt(y) == '(' || s.charAt(y) == ')' || s.charAt(y) == '_' || s.charAt(y) == '=' || s.charAt(y) == '+' || s.charAt(y) == '-' || s.charAt(y) == '|' || s.charAt(y) == ':' || s.charAt(y) == '/' || s.charAt(y) == '~')) {
+            } else {
                 remove += s.charAt(y);
             }
         }
-
         return remove;
+    }
+    static int characterCounter(String s, String alpha){
+        int charCount=0;
+        char c=alpha.charAt(0);
+        for(int i=0; i<s.length() ;i++)
+        {
+            if(s.charAt(i)==c){
+                charCount++;
+            }
+        }
+        return charCount;
     }
 }
