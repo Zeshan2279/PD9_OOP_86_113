@@ -37,17 +37,18 @@ public class Task1 {
     }
 
     public static void main(String[] args) {
-        Scanner cin= new Scanner(System.in);
+        Scanner cin = new Scanner(System.in);
         System.out.println("Enter the String: ");
-        String s=cin.nextLine();
-        System.out.println("Number of words: "+wordCount(s));
-        System.out.println("Number of vowels: "+ vowelCounter(s));
-        System.out.println("Number of punctuations: "+ puncCount(s));
-        
-        if (findSubString(s, "the") == 1) {
-            System.out.println("\"the\" is a part of this string");
-        }else{
-            System.out.println("\"the\" is not a part of this string");
+        String s = cin.nextLine();
+        System.out.println("Number of words: " + wordCount(s));
+        System.out.println("Number of vowels: " + vowelCounter(s));
+        System.out.println("Number of punctuations: " + puncCount(s));
+        System.out.println("Enter the String to search: ");
+        String sub = cin.nextLine();
+        if (findSubString(s, sub) == 1) {
+            System.out.println(sub + " is a part of this string");
+        } else {
+            System.out.println(sub + " is not a part of this string");
         }
     }
 
