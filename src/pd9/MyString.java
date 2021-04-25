@@ -15,7 +15,9 @@ public class MyString {
 
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in);
-        System.out.println("Enter String (Checking if it is alphabetic): ");
+      
+
+        System.out.println("Enter String (To Check if it is alphabetic): ");
         String s = cin.nextLine();
         if (isAlpha(s)) {
             System.out.println("Given String is only alphabetic");
